@@ -26,13 +26,15 @@
         <th>
           <button type="submit">Detail</button>
           <button type="submit">Edit</button>
-          <button type="submit">Delete</button>
+          <form action="../delete-player/<%= dataPlayer.id %>">
+            <button type="submit">Delete</button>
+          </form>
         </th>
       </tr>
     <% } %>
   </table>
 
-  <form action="" method="get">
+  <form action="../add-player" method="GET">
     <div style="text-align: center;">
       <button style="font-size: 20px;" type="submit">Add New Players</button>
     </div>
