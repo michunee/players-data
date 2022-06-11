@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLAYERS</title>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+  <h1 style="text-align: center;">Players of the game</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Address</th>
+    </tr>
+    <% for(dataPlayer of dataPlayer) { %>
+      <tr>
+        <th><%= dataPlayer.id %></th>
+        <th><%= dataPlayer.name %></th>
+        <th><%= dataPlayer.age %></th>
+        <th><%= dataPlayer.email %></th>
+        <th><%= dataPlayer.address %></th>
+        <th>
+          <button type="submit">Detail</button>
+          <button type="submit">Edit</button>
+          <button type="submit">Delete</button>
+        </th>
+      </tr>
+    <% } %>
+  </table>
+
+  <form action="" method="get">
+    <div style="text-align: center;">
+      <button style="font-size: 20px;" type="submit">Add New Players</button>
+    </div>
+  </form>
+    
+</body>
+</html>
