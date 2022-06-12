@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Player</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Edit player</h1>
+    <form style="text-align: center;" action="../edit-player/<%= dataPlayer[0].id %>" method="POST">
+        <label>ID Player:</label><br>
+        <input type="text"name="id" value = "<%= dataPlayer[0].id %>" readonly><br>
+        <label>Name Player:</label><br>
+        <input type="text"name="name" value = "<%= dataPlayer[0].name %>"><br>
+        <label>Age:</label><br>
+        <input type="text"name="age" value = "<%= dataPlayer[0].age %>"><br>
+        <label>Email:</label><br>
+        <input type="text"name="email" value = "<%= dataPlayer[0].email %>"><br>
+        <label>Address:</label><br>
+        <input type="text"name="address" value = "<%= dataPlayer[0].address %>"><br><br>
+        <button type="submit">Edit Player</button>
+    </form>
+    <form style="text-align: center;" action="./" method="GET"> 
+        <button type="submit">Back</button>
+    </form>
+    
+</body>
+</html>

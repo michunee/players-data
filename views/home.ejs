@@ -24,9 +24,13 @@
         <th><%= dataPlayer.email %></th>
         <th><%= dataPlayer.address %></th>
         <th>
-          <button type="submit">Detail</button>
-          <button type="submit">Edit</button>
-          <form action="../delete-player/<%= dataPlayer.id %>">
+          <form action="../detail-player/<%= dataPlayer.id %>" method="GET">
+            <button type="submit">Detail</button>
+          </form>
+          <form action="../edit-player/<%= dataPlayer.id %>" method="GET">
+            <button type="submit">Edit</button>
+          </form>
+          <form action="../delete-player/<%= dataPlayer.id %>" method="GET">
             <button type="submit">Delete</button>
           </form>
         </th>

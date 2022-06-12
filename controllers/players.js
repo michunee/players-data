@@ -27,9 +27,30 @@ const deletePlayer = async(req, res) => {
     res.redirect('/');
 }
 
+const detailPlayer = async(req, res) => {
+    let id = req.params.id;
+    let dataPlayer = await playersModel.detailPlayer(id);
+    res.render('detailPlayerForm', { dataPlayer : dataPlayer });
+}
+
+const addeditPlayer = async(req, res) => {
+    let id = req.params.id;
+    let dataPlayer = await playersModel.detailPlayer(id);
+    res.render('editPlayerForm', { dataPlayer : dataPlayer });
+}
+
+const editPlayer = async(req, res) => {
+    let {id, name, age, email, address} = req.body;
+    let dataPlayer = await playersModel.editPlayer(id, name, age, email, address);
+    res.redirect('/');
+}
+
 module.exports = {
     showPlayers,
     addPlayersForm,
     addnewPlayer,
-    deletePlayer
+    deletePlayer,
+    detailPlayer,
+    addeditPlayer,
+    editPlayer
 }
